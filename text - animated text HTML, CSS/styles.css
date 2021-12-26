@@ -1,0 +1,28 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Sigmar One", cursive;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  image-rendering: 100%;
+}
+
+.main-text {
+  margin-top: 250px;
+  background: url(../img/3.jpg);
+  font-size: 150px;
+  color: transparent;
+  -webkit-background-clip: text;
+  animation: animet 10s infinite ease-in;
+}
+
+@keyframes animet {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
