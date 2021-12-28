@@ -17,6 +17,12 @@ ul {
 a {
   text-decoration: none;
   color: var(--text);
+  cursor: pointer;
+  transition: color 0.2s ease-in;
+}
+
+a:hover {
+  color: var(--accent-text);
 }
 
 h1,
@@ -39,6 +45,7 @@ img {
 :root {
   --background-color: #0b1d26;
   --text: #ffffff;
+  --accent-text: #fbd784;
 }
 
 /* header-nav = row */
@@ -52,20 +59,58 @@ body {
   color: var(--text);
 }
 
+/* Base */
+
 .container-wide {
   width: 1410px;
   padding: 15px;
+  margin: 0 auto;
 }
 
-.header-nav {
+.row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+/* header - DESCKTOP */
+
+.header {
+  padding-top: 64px;
 }
 
 .logo {
   font-size: 32px;
+  font-weight: 700;
   line-height: 1.18;
   letter-spacing: 0.01em;
   text-transform: capitalize;
 }
-,
+
+.header-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.header-list-link {
+  transition: border-bottom 0.2s ease-in;
+}
+
+.header-list-link:not(:last-child) {
+  margin-right: 40px;
+}
+
+.header-list-link:hover {
+  border-bottom: 2px solid var(--accent-text);
+}
+
+.account {
+  fill: var(--text);
+  transition: color 0.2s ease, fill 0.2s ease, border-bottom 0.2s ease;
+}
+
+.account:hover {
+  fill: var(--accent-text);
+  border-bottom: 2px solid var(--accent-text);
+}
